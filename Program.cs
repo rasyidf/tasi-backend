@@ -32,14 +32,14 @@ namespace TASI.Backend
             var logger = new LoggerConfiguration()
                 // override log level
                 .MinimumLevel.Override("Microsoft", LogEventLevel.Information)
-                .MinimumLevel.Override("Elastic.Apm", LogEventLevel.Information)
+                //.MinimumLevel.Override("Elastic.Apm", LogEventLevel.Information)
                 .MinimumLevel.Debug()
 
                 // enrich with extra information
                 .Enrich.FromLogContext()
                 .Enrich.WithMachineName()
                 .Enrich.WithEnvironmentUserName()
-                .Enrich.WithElasticApmCorrelationInfo()
+                //.Enrich.WithElasticApmCorrelationInfo()
 
                 // log sinks
                 .WriteTo.Console()

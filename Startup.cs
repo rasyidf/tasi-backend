@@ -87,7 +87,7 @@ namespace TASI.Backend
                 app.UseHsts();
             }
 
-            app.UseElasticApm(Configuration, new HttpDiagnosticsSubscriber(), new EfCoreDiagnosticsSubscriber());
+            //app.UseElasticApm(Configuration, new HttpDiagnosticsSubscriber(), new EfCoreDiagnosticsSubscriber());
             app.UseHttpsRedirection();
             app.UseCustomSerilog();
 
